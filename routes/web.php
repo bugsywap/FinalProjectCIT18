@@ -14,3 +14,14 @@ Route::post('/cms' , [StartUpController::class, 'insert'])->name('CMS.insert');
 Route::get('/cms/{startup}/edit' , [StartUpController::class, 'edit'])->name('CMS.edit');
 Route::put('/cms/{startup}/update' , [StartUpController::class, 'update'])->name('CMS.update');
 Route::delete('/cms/{startup}/delete' , [StartUpController::class, 'delete'])->name('CMS.delete');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
