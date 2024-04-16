@@ -21,7 +21,7 @@ class StartUpController extends Controller
 
     public function edit(StartUp $startup){
 
-        dd($startup);
+        return view('CMS.editView' , ['startup' => $startup]);
     }
 
     public function insert(Request $request){
