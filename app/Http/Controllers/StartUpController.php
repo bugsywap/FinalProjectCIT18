@@ -35,13 +35,13 @@ class StartUpController extends Controller
 
         $startup->update($data);
 
-        return redirect(route('CMS.index'))->with('success' , 'Data Updated Successfully!');
+        return redirect(route('CMS.index'))->with('success' , 'Startup listed.');
     }
 
     public function delete(Startup $startup){
 
         $startup->delete();
-        return redirect(route('CMS.index'))->with('success' , 'Data Deleted Successfully!');
+        return redirect(route('CMS.index'))->with('success' , 'Startup unlisted.');
 
     }
 
