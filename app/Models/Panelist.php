@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Capstone_Management extends Model
+class Panelist extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name' , 'major' , 'age'
+    ];
 }
