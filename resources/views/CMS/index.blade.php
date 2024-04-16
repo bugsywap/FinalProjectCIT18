@@ -10,6 +10,10 @@
             </div>
         @endif
     </div>
+    <form action="{{route('CMS.insertView')}}">
+    <input type="submit" value="Insert New Data">
+    </form>
+    
     <table border="1">
         <tr>
             <th>ID</th>
