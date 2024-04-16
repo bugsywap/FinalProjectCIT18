@@ -31,7 +31,13 @@
                 <td>{{$startup->email}}</td>
                 <td>{{$startup->school}}</td>
                 <td><button><a href="{{route('CMS.edit' , ['startup' => $startup])}}">Edit</a></button></td>
-                <td><button><a href="">Delete</a></button></td>
+                <td>
+                    <form method="post" action="{{route('CMS.delete', ['startup' => $startup])}}">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
         @endforeach
     </table>

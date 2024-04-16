@@ -38,6 +38,13 @@ class StartUpController extends Controller
         return redirect(route('CMS.index'))->with('success' , 'Data Updated Successfully!');
     }
 
+    public function delete(Startup $startup){
+
+        $startup->delete();
+        return redirect(route('CMS.index'))->with('success' , 'Data Deleted Successfully!');
+
+    }
+
     public function insert(Request $request){
         $data = $request->validate([
             'capstone_name' => 'required',
