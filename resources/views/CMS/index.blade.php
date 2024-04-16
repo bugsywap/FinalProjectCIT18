@@ -1,8 +1,8 @@
 @include('partials.header')
 
 
-<div class="cont">
-    <h1>ITU NA ANG LISTAHAN NYO NG START-UPS</h1>
+<div class="con">
+    <h1 class="text-7x1 font-bold text-blue-500"> 🚀 Startups Archive 2600</h1>
     <div>
         @if (session()->has('success'))
             <div>
@@ -11,10 +11,10 @@
         @endif
     </div>
     <form action="{{route('CMS.insertView')}}">
-    <input type="submit" value="Insert New Data">
+    <input type="submit" value="Insert New Data" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
     </form>
     
-    <table border="1">
+    <table>
         <tr>
             <th>ID</th>
             <th>Capstone Name</th>
@@ -34,12 +34,12 @@
                 <td>{{$startup->trl}}</td>
                 <td>{{$startup->email}}</td>
                 <td>{{$startup->school}}</td>
-                <td><button><a href="{{route('CMS.edit' , ['startup' => $startup])}}">Edit</a></button></td>
+                <td><button><a href="{{route('CMS.edit' , ['startup' => $startup])}}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a></button></td>
                 <td>
                     <form method="post" action="{{route('CMS.delete', ['startup' => $startup])}}">
                         @csrf
                         @method('delete')
-                        <input type="submit" value="Delete">
+                        <input type="submit" value="Delete" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
                     </form>
                 </td>
             </tr>
