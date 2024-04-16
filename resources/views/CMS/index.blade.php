@@ -1,7 +1,7 @@
 @include('partials.header')
 
 <div class="container mx-auto mt-8 px-4 lg:px-0">
-    <h1 class="text-4xl lg:text-5xl font-bold text-blue-500 mb-3 text-center">🚀 Startups Archive 2600</h1>
+    <h1 class="text-4xl lg:text-5xl font-bold text-blue-500 mb-4 text-center">🚀 Startups Archive 2600</h1>
     @if (session()->has('success'))
         <div class="bg-green-200 text-green-800 py-2 px-4 mb-4 rounded">
             {{ session('success') }}

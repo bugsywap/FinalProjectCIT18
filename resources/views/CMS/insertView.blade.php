@@ -1,7 +1,8 @@
 @include('partials.header')
 
 <div class="container mx-auto mt-8 px-4 lg:px-0">
-    <h1 class="text-4xl lg:text-5xl font-bold text-blue-500 mb-4 text-center">🚀 Startups Archive 2600</h1>
+    <a href="{{ route('CMS.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-7 rounded mb-5">⤶ Back</a> 
+    <h1 class="text-4xl lg:text-5xl font-bold text-blue-500 mt-4 mb-4 text-center">🚀Startup Registration</h1>
     <div>
         @if($errors->any())
             <ul>
@@ -13,9 +14,6 @@
     </div>
 
 </div>
-    <div class="flex justify-center">
-        <a href="{{ route('CMS.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">⤶ Back</a> 
-    </div>
 <div class="flex justify-center max-width:800px">
     
     <form method="post" action="{{route('CMS.insert')}}">
