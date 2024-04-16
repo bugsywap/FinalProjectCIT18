@@ -17,9 +17,9 @@
         @endif
     </div>
     
-    <form method="post" action="">
+    <form method="post" action="{{route('CMS.update', ['startup' => $startup])}}">
         @csrf
-        @method('post')
+        @method('put')
 
         <div class="input-field">
             <label>Capstone Name</label>
@@ -46,7 +46,7 @@
             <input type="text" name="school" placeholder="Where did you go to school"value="{{$startup->school}}">
         </div>
 
-        <input class="save-button" type="submit" value="Save">
+        <input class="save-button" type="submit" value="Update">
     
     </form>
 </div>

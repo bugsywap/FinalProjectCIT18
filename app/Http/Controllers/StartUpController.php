@@ -23,6 +23,20 @@ class StartUpController extends Controller
 
         return view('CMS.editView' , ['startup' => $startup]);
     }
+    public function update(StartUp $startup , Request $request){
+        $data = $request->validate([
+            'capstone_name' => 'required',
+            'description' => 'required',
+            'sdg' => 'required',
+            'trl' => 'required|numeric',
+            'email' => 'required|email',
+            'school' => 'required',
+        ]);
+
+        $startup->update($data);
+
+        return redirect(route('CMS.index'))->with('success' , 'Data Updated Successfully!');
+    }
 
     public function insert(Request $request){
         $data = $request->validate([
